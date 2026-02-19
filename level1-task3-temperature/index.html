@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Temperature Converter | Abhishek Singh Panwar</title>
+
+<style>
+body{
+    font-family: Arial;
+    background: linear-gradient(135deg,#00c6ff,#0072ff);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    width:320px;
+    box-shadow:0 0 25px rgba(0,0,0,0.3);
+}
+
+h2{
+    margin-bottom:15px;
+}
+
+input, select{
+    width:90%;
+    padding:10px;
+    margin:10px 0;
+    font-size:16px;
+    border-radius:8px;
+    border:1px solid gray;
+}
+
+button{
+    padding:10px 20px;
+    background:#0072ff;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0056d6;
+}
+
+/* UNIQUE RESULT BOX */
+.result-box{
+    margin-top:20px;
+    background:linear-gradient(135deg,#ff9966,#ff5e62);
+    padding:20px;
+    border-radius:15px;
+    color:white;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+    animation:fade 0.5s ease;
+}
+
+.result-box p{
+    margin:0;
+    font-size:14px;
+    opacity:0.9;
+}
+
+.result-box h1{
+    margin:5px 0 0;
+    font-size:30px;
+}
+
+@keyframes fade{
+    from{transform:scale(0.7);opacity:0;}
+    to{transform:scale(1);opacity:1;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>🌡 Temperature Converter</h2>
+
+    <input type="number" id="temp" placeholder="Enter temperature">
+
+    <select id="unit">
+        <option value="c">Celsius ➜ Fahrenheit</option>
+        <option value="f">Fahrenheit ➜ Celsius</option>
+    </select>
+
+    <br>
+    <button onclick="convert()">Convert</button>
+
+    <div class="result-box">
+        <p>Converted Temperature</p>
+        <h1 id="result">--</h1>
+    </div>
+</div>
+
+<script>
+function convert(){
+    let t = document.getElementById("temp").value;
+    let unit = document.getElementById("unit").value;
+    let result = document.getElementById("result");
+
+    if(t==""){
+        result.innerHTML="Enter value";
+        return;
+    }
+
+    if(unit=="c"){
+        let f = (t*9/5)+32;
+        result.innerHTML = f.toFixed(2) + " °F";
+    } 
+    else{
+        let c = (t-32)*5/9;
+        result.innerHTML = c.toFixed(2) + " °C";
+    }
+}
+</script>
+
+</body>
+</html>

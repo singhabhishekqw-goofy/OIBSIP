@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Abhishek Singh Panwar| Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#0d1117;
+color:white;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+background: radial-gradient(circle at top,#1f2937,#020617);
+}
+
+.hero h1{
+font-size:50px;
+}
+
+.hero span{
+color:#00f7ff;
+}
+
+.hero p{
+margin-top:10px;
+font-size:20px;
+color:#aaa;
+}
+
+/* glowing line */
+.line{
+width:120px;
+height:4px;
+background:#00f7ff;
+margin:20px auto;
+border-radius:10px;
+box-shadow:0 0 15px #00f7ff;
+}
+
+/* section */
+section{
+padding:80px 40px;
+text-align:center;
+}
+
+h2{
+color:#00f7ff;
+margin-bottom:25px;
+}
+
+/* skills */
+.skills{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.skill{
+background:#111827;
+padding:20px 30px;
+border-radius:12px;
+font-size:18px;
+box-shadow:0 0 15px rgba(0,255,255,0.2);
+}
+
+/* projects */
+.projects{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+}
+
+.card{
+background:#111827;
+padding:25px;
+width:260px;
+border-radius:15px;
+box-shadow:0 0 20px rgba(0,0,0,0.6);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.05);
+box-shadow:0 0 25px cyan;
+}
+
+.card h3{
+color:#00f7ff;
+margin-bottom:10px;
+}
+
+/* contact */
+.contact p{
+margin:10px;
+font-size:18px;
+color:#ccc;
+}
+
+/* footer */
+footer{
+background:black;
+padding:20px;
+text-align:center;
+margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+<h1>Hi, I'm <span>Abhishek Singh Panwar</span></h1>
+<p>Web Developer | Oasis Infobyte Intern</p>
+<div class="line"></div>
+<p>Creating modern and responsive websites</p>
+</div>
+
+<section>
+<h2>Skills</h2>
+<div class="skills">
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Web Design</div>
+</div>
+</section>
+
+<section>
+<h2>Projects</h2>
+<div class="projects">
+
+<div class="card">
+<h3>Landing Page</h3>
+<p>Modern responsive landing page design.</p>
+</div>
+
+<div class="card">
+<h3>Calculator</h3>
+<p>Stylish calculator using JavaScript.</p>
+</div>
+
+<div class="card">
+<h3>Portfolio</h3>
+<p>Personal developer portfolio.</p>
+</div>
+
+<div class="card">
+<h3>Temperature Converter</h3>
+<p>Convert Celsius & Fahrenheit.</p>
+</div>
+
+</div>
+</section>
+
+<section class="contact">
+<h2>Contact</h2>
+<p>Email: abhishek@email.com</p>
+<p>Phone: 9876543210</p>
+<p>India</p>
+</section>
+
+<footer>
+<p>© 2026 Abhishek Singh Panwar| Oasis Infobyte Internship</p>
+</footer>
+
+</body>
+</html>
